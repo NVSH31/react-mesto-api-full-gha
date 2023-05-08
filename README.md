@@ -8,7 +8,7 @@
 
 ## Ссылки на проект
 
-IP-адрес 51.250.27.166
+IP <51.250.27.166>
 
 Frontend https://shpaknv15.frontend.nomoredomains.monster
 
