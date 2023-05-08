@@ -1,0 +1,21 @@
+.login-register__title {
+  margin: 0 auto 50px;
+  padding: 0;
+  width: 100%;
+  text-align: center;
+  font-weight: 900;
+  font-size: 24px;
+  line-height: 29.05px;
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: center;
+}
+
+@media screen and (max-width: 602px) {
+  .login-register__title {
+    margin-bottom: 40px;
+    font-size: 20px;
+    line-height: 24.2px;
+  }
+}

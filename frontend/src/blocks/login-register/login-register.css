@@ -1,0 +1,14 @@
+.login-register {
+  margin: 60px auto 112px;
+  padding: 0;
+  width: 358px;
+  position: relative;
+}
+
+
+@media screen and (max-width: 602px) {
+  .login-register {
+    margin: 40px auto 77px;
+    width: 230px;
+  }
+}

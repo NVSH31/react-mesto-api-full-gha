@@ -1,0 +1,8 @@
+.popup__container {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+.popup__container:hover {
+  cursor: auto;
+}

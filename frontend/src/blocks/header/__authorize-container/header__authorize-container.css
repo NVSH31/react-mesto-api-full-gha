@@ -1,0 +1,18 @@
+.header__authorize-container {
+  margin: 0;
+  padding: 0;
+  width: fit-content;
+  display: flex;
+  flex-direction: row;
+}
+
+@media screen and (max-width: 602px) {
+  .header__authorize-container {
+    top: 0;
+    left: 0;
+    margin: auto;
+    flex-direction: column;
+    width: 100%;
+    border-bottom: 1px solid rgba(54, 54, 54, 0.7);
+  }
+}

@@ -1,0 +1,9 @@
+.header__authorize-container_hide {
+  display: flex;
+}
+
+@media screen and (max-width: 602px) {
+  .header__authorize-container_hide {
+    display: none;
+  }
+}

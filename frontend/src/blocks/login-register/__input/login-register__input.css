@@ -1,0 +1,17 @@
+.login-register__input {
+  margin: 0 auto 0;
+  box-sizing: border-box;
+  padding: 0 0 13px;
+  width: 100%;
+  border: none;
+  border-bottom: solid 2px #ccc;
+  background-color: black;
+  color: #ccc;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 17px;
+}
+
+.login-register__input:first-of-type {
+  margin-bottom: 30px;
+}

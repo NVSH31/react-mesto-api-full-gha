@@ -1,0 +1,29 @@
+.header__mobile-button {
+  display: none;
+  position: absolute;
+  margin: 0;
+  padding: 0;
+  border: none;
+  bottom: 0;
+  right: 0;
+  width: 0;
+  height: 0;
+  background-color: rgba(0, 0, 0, 0);
+  background-image: url('../../../images/Close-Icon.svg');
+  background-size: contain;
+}
+
+@media screen and (max-width: 602px) {
+  .header__mobile-button {
+    display: block;
+    bottom: 31px;
+    right: 30px;
+    width: 20px;
+    height: 20px;
+  }
+
+  .header__mobile-button:hover {
+    opacity: 0.6;
+    cursor: pointer;
+  }
+}

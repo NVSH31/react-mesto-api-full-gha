@@ -1,0 +1,11 @@
+.login-register__login-link {
+  margin: 0;
+  padding: 0;
+  color: #fff;
+  text-decoration: none;
+}
+
+.login-register__login-link:hover {
+  opacity: 0.6;
+  cursor: pointer;
+}

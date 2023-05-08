@@ -1,0 +1,6 @@
+.header__mobile-button_burger {
+  background-image: url('../../../../images/icon-burger.svg');
+  background-size: contain;
+  width: 24px;
+  height: 24px;
+}

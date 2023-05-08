@@ -1,0 +1,20 @@
+.login-register__login-text {
+  margin: 0;
+  padding: 0;
+  position: absolute;
+  top: 450px;
+  left: 0;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 17px;
+  width: 100%;
+  text-align: center;
+}
+
+@media screen and (max-width: 602px) {
+  .login-register__login-text {
+    font-size: 14px;
+    line-height: 17px;
+    top:396px;
+  }
+}
