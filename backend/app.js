@@ -9,7 +9,7 @@ const {
   validateEmail, validatePassword, validateUserNameAbout, validateAvatarSignup,
 } = require('./validators/validators');
 const { requesLogger, errorLogger } = require('./middlewares/logger');
-const { cors } = require('./middlewares/cors');
+const { corsMW } = require('./middlewares/cors');
 
 const app = express();
 const { createUser, login } = require('./controllers/users');
@@ -23,7 +23,7 @@ const {
 
 mongoose.connect(BASE_PATH);
 
-app.use(cors);
+app.use(corsMW);
 
 app.use(cookieParser());
 

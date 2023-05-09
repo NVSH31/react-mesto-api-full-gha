@@ -7,7 +7,7 @@ const allowedCors = [
 ];
 const DEFAULT_ALLOWED_METHODS = 'GET,HEAD,PUT,PATCH,POST,DELETE';
 
-const cors = (req, res, next) => {
+const corsMW = (req, res, next) => {
   const { method } = req;
   const { origin } = req.headers;
 
@@ -17,16 +17,22 @@ const cors = (req, res, next) => {
 
   const requestHeaders = req.headers['access-control-request-headers'];
 
+  console.log('before!!! response.headers =', res.header);
   if (allowedCors.includes(origin)) {
     res.header('Access-Control-Allow-Origin', origin);
+
+    console.log('after add Access-Control-Allow-Origin response.headers =', res.header);
   }
 
   if (method === 'OPTIONS') {
     res.header('Access-Control-Allow-Methods', DEFAULT_ALLOWED_METHODS);
     res.header('Access-Control-Allow-Headers', requestHeaders);
+
+    console.log('after add Access-Control-Allow Methods & Headers response.headers =', res.header);
+
     return res.end();
   }
   return next();
 };
 
-module.exports = { cors };
+module.exports = { corsMW };
