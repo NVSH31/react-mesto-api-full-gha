@@ -22,7 +22,7 @@ module.exports.login = (req, res, next) => {
           httpOnly: true,
         })
         .status(OK)
-        .send({ message: 'токен отправлен в куки' });
+        .send({ token });
     })
     .catch(next);
 };

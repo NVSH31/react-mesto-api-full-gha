@@ -82,7 +82,7 @@ const api = new Api({
   // baseUrl: 'https://mesto.nomoreparties.co/v1/cohort-59',
   baseUrl: 'https://api.shpaknv15.frontend.nomoredomains.monster',
   headers: {
-    'authorization': '2c81cee7-0b96-4411-b571-732e2b2c6fdf',
+    'authorization': `Bearer ${localStorage.getItem("jwt")}`,
     'Content-Type': 'application/json',
   }
 });
