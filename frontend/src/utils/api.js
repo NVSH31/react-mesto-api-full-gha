@@ -14,15 +14,23 @@ class Api {
 
   getInitialCards() {
     return this._request(`${this._baseUrl}/cards`, {
-      credentials: 'include', // отправляем куки
+      // credentials: 'include', // отправляем куки
       headers: this._headers
+      // headers: {
+      //   ...this._headers,
+      //   'Authorization': `Bearer ${localStorage.getItem('jwt')}`
+      // }
     });
   }
 
   getMe() {
     return this._request(`${this._baseUrl}/users/me`, {
-      credentials: 'include', // отправляем куки
+      // credentials: 'include', // отправляем куки
       headers: this._headers
+      // headers: {
+      //   ...this._headers,
+      //   'Authorization': `Bearer ${localStorage.getItem('jwt')}`
+      // }
     });
   }
 
@@ -79,10 +87,9 @@ class Api {
 }
 
 const api = new Api({
-  // baseUrl: 'https://mesto.nomoreparties.co/v1/cohort-59',
   baseUrl: 'https://api.shpaknv15.frontend.nomoredomains.monster',
   headers: {
-    'authorization': `Bearer ${localStorage.getItem("jwt")}`,
+    'Authorization': `Bearer ${localStorage.getItem('jwt')}`,
     'Content-Type': 'application/json',
   }
 });

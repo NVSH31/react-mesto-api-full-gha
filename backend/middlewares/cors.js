@@ -12,20 +12,10 @@ const corsMW = (req, res, next) => {
   const { method } = req;
   const { origin } = req.headers;
 
-  console.log('headers =', req.headers);
-  console.log('origin =', origin);
-  console.log('request.method = ', method);
-
   const requestHeaders = req.headers['access-control-request-headers'];
 
-  console.log('before!!! response.headers =', res.header);
   if (allowedCors.includes(origin)) {
     res.header('Access-Control-Allow-Origin', origin);
-
-    console.log(
-      'after add Access-Control-Allow-Origin response.headers =',
-      res.header,
-    );
   }
 
   if (method === 'OPTIONS') {

@@ -10,8 +10,7 @@ const {
 } = require('../controllers/cards');
 const { auth } = require('../middlewares/auth');
 
-// router.get('/', auth, getCards);
-router.get('/', getCards);
+router.get('/', auth, getCards);
 router.post('/', celebrate({
   body: Joi.object().keys({
     name: validateCardName,
