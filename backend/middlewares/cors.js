@@ -1,9 +1,15 @@
-const { allowedCors } = require('../utils/const');
+// const { allowedCors } = require('../utils/const');
+const allowedCors = [
+  'http://shpaknv15.frontend.nomoredomains.monster',
+  'https://shpaknv15.frontend.nomoredomains.monster',
+  'http://localhost:3000',
+  'localhost:3000',
+];
+const DEFAULT_ALLOWED_METHODS = 'GET,HEAD,PUT,PATCH,POST,DELETE';
 
-module.exports.cors = (req, res, next) => {
-  const { origin } = req.headers;
+const cors = (req, res, next) => {
   const { method } = req;
-  const DEFAULT_ALLOWED_METHODS = 'GET,HEAD,PUT,PATCH,POST,DELETE';
+  const { origin } = req.headers;
   const requestHeaders = req.headers['access-control-request-headers'];
 
   if (allowedCors.includes(origin)) {
@@ -15,6 +21,7 @@ module.exports.cors = (req, res, next) => {
     res.header('Access-Control-Allow-Headers', requestHeaders);
     return res.end();
   }
-
   return next();
 };
+
+module.exports = { cors };
