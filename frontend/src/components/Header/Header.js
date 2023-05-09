@@ -7,7 +7,7 @@ import { CurrentUserContext } from '../../contexts/CurrentUserContext';
 function Header({loggedIn, handleLogOut}) {
 
   // const value = useContext(NoMorePartiesUserContext);
-  const value = useContext(CurrentUserContext);
+  const currentUser = useContext(CurrentUserContext);
   const [hideMenu, setHideMenu] = useState(true);
 
   const handleCloseClick = () => {
@@ -20,7 +20,7 @@ function Header({loggedIn, handleLogOut}) {
         <img className="header__logo" src={logoPath} alt="Логотип Mesto Russia" />
         <div className= {`header__authorize-container ${hideMenu && 'header__authorize-container_hide'} `} >
           <p className="header__email">
-            {loggedIn && (value.data ? value.data.email : 'email') }
+            { loggedIn && currentUser.email }
           </p>
             { (loggedIn &&
                 <button className='header__button' onClick={handleLogOut}>Выйти</button>
