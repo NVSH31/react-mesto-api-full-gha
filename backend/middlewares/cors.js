@@ -1,4 +1,3 @@
-// const { allowedCors } = require('../utils/const');
 const allowedCors = [
   'http://shpaknv15.frontend.nomoredomains.monster',
   'https://shpaknv15.frontend.nomoredomains.monster',
@@ -13,6 +12,8 @@ const corsMW = (req, res, next) => {
   const { origin } = req.headers;
 
   const requestHeaders = req.headers['access-control-request-headers'];
+
+  res.header('Cache-Control', 'no-cache');
 
   if (allowedCors.includes(origin)) {
     res.header('Access-Control-Allow-Origin', origin);
