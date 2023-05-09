@@ -1,12 +1,10 @@
 import React, { useContext, useState } from 'react';
 import { Link } from 'react-router-dom';
 import logoPath from '../../images/logoheader.svg';
-// import { NoMorePartiesUserContext } from "../../contexts/NoMorePartiesUserContext";
 import { CurrentUserContext } from '../../contexts/CurrentUserContext';
 
 function Header({loggedIn, handleLogOut}) {
 
-  // const value = useContext(NoMorePartiesUserContext);
   const currentUser = useContext(CurrentUserContext);
   const [hideMenu, setHideMenu] = useState(true);
 
